@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+body {
+    background: linear-gradient(208deg, #4cd566, #654fa4);
+    background-size: 120% 120%;
+
+    -webkit-animation: bgAnimation 30s ease infinite;
+    -moz-animation: bgAnimation 30s ease infinite;
+    animation: bgAnimation 30s ease infinite;
+
+    font-family: Offside, cursive;
+}
+
+@-webkit-keyframes bgAnimation {
+    0% {
+        background-position: 88% 10%
+    }
+    50% {
+        background-position: 14% 100%
+    }
+    100% {
+        background-position: 88% 10%
+    }
+}
+
+@-moz-keyframes bgAnimation {
+    0% {
+        background-position: 88% 10%
+    }
+    50% {
+        background-position: 14% 100%
+    }
+    100% {
+        background-position: 88% 10%
+    }
+}
+
+@keyframes bgAnimation {
+    0% {
+        background-position: 88% 10%
+    }
+    50% {
+        background-position: 14% 100%
+    }
+    100% {
+        background-position: 88% 10%
+    }
+}
+
+
+body {
+    font-family: Offside, cursive;
+}
+
+a {
+    color: #fff !important;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 10% 1400px 10%;
+    grid-template-areas:
+            ". header ."
+            ". content ."
+            ". footer ."
+            ". form . "
+            ". earth .";
+
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 47% 53%;
+    height: 100%;
+
+    grid-row-gap: 15px;
+}
+
+@media (max-width: 1570px) and (min-width: 1341px) {
+    .grid {
+        grid-template-columns: 250px 1200px 250px;
+    }
+}
+
+@media (max-width: 1340px) and (min-width: 1141px) {
+    .grid {
+        grid-template-columns: 250px 1000px 250px;
+    }
+}
+
+@media (max-width: 1140px) {
+    .grid {
+        grid-template-columns: 250px 700px 250px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                ". content-1 ."
+                ". content-2 ."
+                ". content-3 .";
+        grid-row-gap: 1px;
+    }
+}
+
+@media (max-width: 750px) {
+    .grid {
+        grid-template-columns: 250px 500px 250px;
+    }
+}
+
+@media (max-width: 530px) {
+    .grid {
+        grid-template-columns: 250px 300px 250px;
+    }
+}

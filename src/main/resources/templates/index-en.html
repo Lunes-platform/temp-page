@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Lunes Platform</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Wandyer Silva"/>
+    <meta name="description" content="Lunes Platform will allow you to create tokens and
+                    authenticity registers using blockchain. Soon we will be in
+                    pre-sale of ICO tokens. Enter your email and receive
+                    all the news about ICO launch."/>
+
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{img/favicon.ico}"/>
+    <link rel="icon" type="image/x-icon" th:href="@{img/favicon.ico}"/>
+
+    <!-- Styles -->
+    <link rel="stylesheet" th:href="@{css/reset.css}"/>
+    <link rel="stylesheet" th:href="@{css/main.css}"/>
+    <link rel="stylesheet" th:href="@{css/content-1.css}"/>
+    <link rel="stylesheet" th:href="@{css/content-2.css}"/>
+    <link rel="stylesheet" th:href="@{css/content-3.css}"/>
+    <link rel="stylesheet" th:href="@{css/footer.css}"/>
+    <link rel="stylesheet" th:href="@{css/header.css}"/>
+    <link rel="stylesheet" th:href="@{css/background.css}"/>
+
+    <!-- Google Offside Font -->
+    <link href="https://fonts.googleapis.com/css?family=Offside" rel="stylesheet"/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+</head>
+<body>
+<div class="grid">
+    <!-- Header -->
+    <div class="header">
+        <div class="lunes-title">
+            <span class="title-text">Lun<span class="green-word">e</span>s</span>
+        </div>
+        <div class="language-choose">
+            <div class="language-text">
+                <a href="/pt">Português</a>
+                <span> | </span>
+                <a href="/en" class="selected">English</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="content-1">
+            <p class="first-text en">Create Tokens <br/> and Registers |<span class="green-word">Faster</span></p>
+        </div>
+
+
+        <div class="content-2">
+            <div class="img-holder">
+                <img class="ilustracao-img" th:src="@{img/ilustracao.svg}"/>
+            </div>
+        </div>
+        <div class="content-3">
+            <p class="second-text">
+                Lunes Platform will allow you to create tokens and
+                authenticity registers using blockchain. Soon we will be in
+                pre-sale of the ICO tokens. Enter your email and receive
+                all the news about the ICO launch.
+            </p>
+            <form th:action="@{/submitEmail}" th:object="${formView}" method="POST">
+                <div class="input-wrapper">
+                    <input class="input-field form-control" type="email"
+                           th:field="*{email}"
+                           placeholder="Type your email"
+                           required="required"/>
+                    <button type="submit" class="input-button">Subscribe</button>
+                </div>
+                <div class="messages">
+                    <span th:if="${successMessage != null}" class="success-message" th:text="${successMessage}">></span>
+                    <span th:if="${errorMessage != null}" class="error-messages" th:text="${errorMessage}"></span>
+                    <span th:unlesss="${errorMessage == null}" class="error-messages"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Social Networks -->
+    <div class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/company/lunes-platform" target="_blank">LinkedIn</a>
+            <span> | </span>
+            <a href="https://www.facebook.com/lunesplataforma/" target="_blank">Facebook</a>
+            <span> | </span>
+            <a href="https://twitter.com/LunesPlataforma" target="_blank">Twitter</a>
+            <span> | </span>
+            <a href="https://t.me/joinchat/Ckql0UCwuWE79f04mXe5EA" target="_blank">Telegram</a>
+            <span> | </span>
+            <a href="https://lunesteam.slack.com/" target="_blank">Slack</a>
+            <span> | </span>
+            <a href="https://medium.com/lunes-platform" target="_blank">Medium</a>
+        </div>
+        <div class="copyright">
+            <span style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif">©</span><span>lunes 2017</span>
+        </div>
+        <div class="designer">
+            <span>UI Design ; Damião Vieira</span>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
+    <img class="form-img" th:src="@{img/Forms.png}"/>
+    <img class="earth-img" th:src="@{img/terra.png}"/>
+</div>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '475536289493318');
+    fbq('track', 'PageView');
+    fbq('track', 'Lead');
+    fbq('track', 'CompleteRegistration');
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=475536289493318&amp;ev=PageView&amp;noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+</body>
+</html>

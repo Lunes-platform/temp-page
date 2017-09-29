@@ -1,0 +1,8 @@
+${AnsiColor.MAGENTA}  _        _    _   _   _  ${AnsiColor.BRIGHT_GREEN} ______  ${AnsiColor.MAGENTA}  _____
+${AnsiColor.MAGENTA} | |      | |  | | | \ | | ${AnsiColor.BRIGHT_GREEN}|  ____| ${AnsiColor.MAGENTA} / ____|
+${AnsiColor.MAGENTA} | |      | |  | | |  \| | ${AnsiColor.BRIGHT_GREEN}| |__    ${AnsiColor.MAGENTA}| (___
+${AnsiColor.MAGENTA} | |      | |  | | | . ` | ${AnsiColor.BRIGHT_GREEN}|  __|   ${AnsiColor.MAGENTA} \___ \
+${AnsiColor.MAGENTA} | |____  | |__| | | |\  | ${AnsiColor.BRIGHT_GREEN}| |____  ${AnsiColor.MAGENTA} ____) |
+${AnsiColor.MAGENTA} |______|  \____/  |_| \_| ${AnsiColor.BRIGHT_GREEN}|______| ${AnsiColor.MAGENTA}|_____/
+
+${AnsiColor.BRIGHT_RED}:: Running Spring Boot  ${AnsiColor.BRIGHT_CYAN}${spring-boot.version} ${AnsiColor.BRIGHT_RED}::${AnsiStyle.NORMAL}

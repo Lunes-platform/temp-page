@@ -1,0 +1,208 @@
+.content .content-3 {
+    font-family: Offside, cursive;
+    font-size: 19px;
+    letter-spacing: 1.1px;
+    text-align: left;
+}
+
+.content .content-3 .second-text {
+    color: #fff;
+}
+
+.input-wrapper {
+    display: block;
+    margin-top: 50px;
+    float: left;
+}
+
+.input-wrapper button {
+    font-family: Offside, cursive;
+    cursor: pointer;
+}
+
+.input-button {
+    width: 160px !important;
+    height: 50px !important;
+    background-color: #6c56aa !important;
+    color: #fff !important;
+    font-size: 18px;
+    left: 0;
+    border-radius: 0 9px 9px 0;
+    float: left;
+    outline: none !important;
+}
+
+.input-button:hover {
+    background-color: #4b4487 !important;
+}
+
+.input-button:focus,
+.input-button:active:hover, .input-button:active:focus{
+     background-color: #7962c4 !important;
+ }
+
+
+.input-field {
+    width: 450px !important;
+    height: 35px !important;
+    background-color: #ffffff;
+    border-radius: 9px 0 0 9px !important;
+    float:left !important;;
+    font-family: Offside, cursive !important;;
+    font-size: 20px !important;;
+    padding-left: 10px !important;;
+}
+
+.content-3 .messages {
+    margin-top: 15px;
+    margin-right: 5em;
+    float: right;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.content-3 .error-messages {
+    color: rgb(255, 163, 163);
+
+}
+
+.content-3 .success-message {
+    color: rgb(90, 213, 102);
+}
+
+
+@media (min-width: 1341px) {
+    .content .content-3 {
+        width: 107%
+    }
+}
+
+@media (max-width: 1570px) and (min-width: 1341px) {
+    .input-field {
+        width: 380px !important;
+        font-size: 18px !important;;
+    }
+    .input-button {
+        width: 140px !important;;
+        font-size: 18px !important;;
+    }
+
+    .content .content-3 {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    .content-3 .messages {
+        margin-right: 4em;
+    }
+}
+
+@media (max-width: 1340px) and (min-width: 1141px) {
+
+    .input-field {
+        width: 300px !important;
+        height: 30px !important;
+        font-size: 16px !important;
+    }
+    .input-button {
+        width: 130px !important;
+        height: 45px !important;
+        font-size: 16px !important;
+    }
+
+    .content .content-3 {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    .content-3 .messages {
+        margin-right: 1.5em;
+    }
+
+}
+
+@media (max-width: 1140px) {
+
+    .content .content-3 {
+        font-size: 17px;
+        justify-self: center;
+        text-align: center;
+        grid-area: content-3;
+        margin-top: 15px;
+    }
+
+    .input-field {
+        width: 300px !important;
+        height: 32px !important;
+        font-size: 16px !important;
+        float: none;
+        justify-self: end;
+
+    }
+    .input-button {
+        width: 130px !important;
+        height: 45px !important;
+        font-size: 16px !important;
+        float: none;
+        justify-self: start;
+    }
+
+    .input-wrapper {
+        display: grid;
+        grid-template-columns: 62% 37%;
+        align-items: center;
+        justify-items: center;
+        float: none;
+    }
+
+    .content-3 .messages {
+        margin-right: 0;
+        float: none;
+        clear: both;
+        display: inline-block;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .content .content-3 {
+        font-size: 17px;
+    }
+
+    .input-wrapper {
+        grid-template-columns: 69% 31%;
+    }
+
+}
+
+@media (max-width: 530px) {
+
+    .content .content-3 {
+        font-size: 15px;
+        margin-top: 0;
+    }
+
+    .input-wrapper {
+        grid-template-columns: 69% 31%;
+        margin-top: 35px;
+    }
+
+    .input-field {
+        width: 175px !important;
+        height: 21px !important;
+        font-size: 13px !important;;
+
+    }
+    .input-button {
+        width: 84px !important;
+        height: 35px !important;
+        font-size: 13px !important;
+    }
+
+    .content-3 .messages {
+        font-size: 13px;
+    }
+
+}

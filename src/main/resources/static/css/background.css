@@ -1,0 +1,50 @@
+.form-img {
+    grid-area: form;
+    align-self: end;
+    grid-column-start: 1;
+}
+
+.earth-img {
+    grid-area: earth;
+    width: 500px;
+    z-index: -2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+}
+
+.bg-elements {
+    grid-area: other;
+
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (max-width: 1570px)  {
+    .earth-img {
+        width: 450px;
+        margin-left: 4.5%;
+    }
+}
+
+@media (max-width: 750px)  {
+    .earth-img {
+        width: 300px;
+    }
+
+    .form-img {
+        width: 1200px;
+    }
+}
+@media (max-width: 530px) {
+    .earth-img {
+        width: 300px;
+    }
+
+    .form-img {
+        width: 800px;
+    }
+}
