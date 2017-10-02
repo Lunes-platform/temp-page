@@ -24,6 +24,7 @@
     <link rel="stylesheet" th:href="@{css/footer.css}"/>
     <link rel="stylesheet" th:href="@{css/header.css}"/>
     <link rel="stylesheet" th:href="@{css/background.css}"/>
+    <link rel="stylesheet" th:href="@{css/illustracao.css}"/>
 
     <!-- Google Offside Font -->
     <link href="https://fonts.googleapis.com/css?family=Offside" rel="stylesheet"/>
@@ -58,7 +59,7 @@
 
         <div class="content-2">
             <div class="img-holder">
-                <img class="ilustracao-img" th:src="@{img/ilustracao.svg}"/>
+                <div th:replace="fragments/illustracao :: illustracao"></div>
             </div>
         </div>
         <div class="content-3">
@@ -115,6 +116,7 @@
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
 

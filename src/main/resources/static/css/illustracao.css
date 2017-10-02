@@ -1,0 +1,78 @@
+#planet_group {
+    transform-origin: 50% 74%;
+
+    -webkit-animation: rotation 15s infinite linear;
+    -moz-animation: rotation 15s infinite linear;
+    animation: rotation 15s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@-moz-keyframes rotation {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(359deg);
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+#outside-planetinha {
+    transform-origin: -14% 6%;
+
+    -webkit-animation: circle 15s linear infinite;
+    -moz-animation: circle 15s linear infinite;
+    animation: circle 15s linear infinite;
+}
+
+#planetinha {
+    -webkit-animation: inner-circle 15s linear infinite;
+    -moz-animation: inner-circle 15s linear infinite;
+    animation: inner-circle 15s linear infinite;
+}
+
+#outside-satelite {
+    transform-origin: 17% 3%;
+
+    -webkit-animation: circle 15s linear infinite;
+    -moz-animation: circle 15s linear infinite;
+    animation: circle 15s linear infinite;
+}
+
+#satelite {
+    animation: inner-circle 15s linear infinite;
+}
+
+@keyframes circle {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes inner-circle {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-360deg);
+    }
+}
