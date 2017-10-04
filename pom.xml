@@ -6,10 +6,7 @@
 	<groupId>io.lunes</groupId>
 	<artifactId>temp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<!-- Production -->
-	<!--<packaging>war</packaging>-->
-	<!-- Development -->
-	<packaging>jar</packaging>
+	<packaging>${packaging.type}</packaging>
 
 	<name>Página de Cadastro de Emails</name>
 	<description>Projeto da Página de Cadastros de Emails da Lunes Plataforma</description>
@@ -37,14 +34,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <!-- Production -->
-            <!--<scope>provided</scope>-->
-            <!-- Development -->
-            <scope>compile</scope>
-        </dependency>
 
         <!-- Mailchimp -->
 		<dependency>
@@ -75,6 +64,31 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>development</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<packaging.type>jar</packaging.type>
+			</properties>
+		</profile>
+		<profile>
+			<id>production</id>
+			<properties>
+				<packaging.type>war</packaging.type>
+			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+					<scope>provided</scope>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
 
 
 </project>
